@@ -7,6 +7,8 @@ description: Build a concise “what needs action now” daily brief by aggregat
 
 Generate an action-first digest, not a raw data dump.
 
+If the user asks from a specific role perspective (CEO / manager / employee), read `references/modes.md` and adapt prioritization/output accordingly.
+
 ## Output format
 
 Always output in this structure:
@@ -48,6 +50,12 @@ Collect only what is available in current environment; skip unavailable sources 
 3. Billing or financial notifications
 4. Weather impact for planned outings
 5. Existing tasks/notes (if connected)
+
+## Time-window defaults
+
+- If user asks "today": prioritize 0-24h window
+- If user asks "this week": prioritize 7-day window, still keep Must-do today-centric
+- If user asks without a window: default to today + next 72h
 
 ## Safety and quality
 
